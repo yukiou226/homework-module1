@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Great Cliffs of California</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body id="contact">
     <header>
-        <img src="images/cliff_ocean.jpg" alt="Ocean View Cliff" width="1280" height="564"></image>
-        <div class="main header">
+        <div class="mainheader">
             <div class="logo">
                 <image src="images/logo.png" alt="Great Cliffs Logo" width="125"></image>
             </div>
         <nav class="main-menu">
             <ul>
-                <li>Home</li>
+                <li><a href=index.html>Home</a></li>
                 <li>Cliffs</li>
-                <li>Events</li>
-                <li>Contact</li>
+                <li><a href=actvities.html>Activities</a></li>
+                <li class="active"><a href=contact.html>Contact</a></li>
             </ul>
         </nav>
         </div>
@@ -25,57 +26,74 @@
     <main>
         
         <h1>Contact Us</h1>
-        <p>If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us bu using one of the following:</p>
-        <h2>Phone:</h2>
-        <p>(800)CGCLIFFS</p>
-        <h2>Email:</h2>
-        <p>info@geatcliffs.com</p> 
-        <h2>Fill Out This Form:</h2>  
+        <p class="contenttext">If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us bu using one of the following:</p>
+        <p class="contacttext1"><span class="bold">Phone:</span>(800)CGCLIFFS</p>
+        <p class="contacttext2"><span class="bold">Email:</span>info@geatcliffs.com</p> 
         <!--Form filling-->    
         <form action="/contact" method="post">   
                 <fieldset>
                     <legend>Contact Form</legend>
+                    <div class="personalinfo">
+                    <label>Enter your full name</label>
+                    <input type="text" id="fullName" name="fullName" required> 
         
-                    <label>Enter your full name</label><br>
-                    <input type="text" id="fullName" name="fullName" required><br>
+                    <label>Enter your email</label> 
+                    <input type="email" id="email" name="email" required> 
         
-                    <label>Enter your email</label><br>
-                    <input type="email" id="email" name="email" required><br>
-        
-                    <label>Enter your phone</label><br>
-                    <input type="tel" id="phone" name="phone"><br>
-        
-                    <br><label>How should we contact you?</label><br>
+                    <label>Enter your phone</label> 
+                    <input type="tel" id="phone" name="phone"> 
+                    </div>
+                    
+                    <div class="contactmethod">
+                     <label>How should we contact you?</label> 
+                     <div class="radiogroup">
                     <input type="radio" id="emailContact" name="contactMethod" value="Email">
-                    <label for="emailContact">Email</label><br>
+                    <label for="emailContact">Email</label> 
                     <input type="radio" id="phoneContact" name="contactMethod" value="Phone">
-                    <label for="phoneContact">Phone</label><br>
+                    <label for="phoneContact">Phone</label> 
+                    </div>
+                    </div>
         
-                    <br><label>Which Cliff are you inquiring?</label><br>
+                    <div class="cliffoption">
+                     <label>Which Cliff are you inquiring?</label> 
                     <select id="cliffInquiry" name="cliffInquiry">
                         <option value="West Cliff">West Cliff</option>
                         <option value="North Cliff">North Cliff</option>
                         <option value="East Cliff">East Cliff</option>
                         <option value="South Cliff">South Cliff</option>
-                    </select><br>
+                    </select> 
+                    </div>
         
-                    <br><label for="hearAbout">How did you hear about us:</label><br>
-                    <input type="text" id="hearAbout" name="hearAbout"><br>
-        
-                    <br><button type="submit">Inquire</button>
+                    <div class="chanel">
+                     <label for="hearAbout">How did you hear about us:</label> 
+                    <input type="text" id="hearAbout" name="hearAbout"> 
+                    </div>
+
+                     <button type="submit">Inquire</button>
                 </fieldset>
         </form>
+        <section>
+            
+            <ul id="partners">
+                <li class="partner"><img src="images/partner-bustour.png" alt="partner bus tours"></li>
+                <li class="partner"><img src="images/partner-cabinrental.png" alt="partner cabin rental"></li>
+                <li class="partner"><img src="images/partner-campingadv.png" alt="partner vamping adventure"></li>
+                <li class="partner"><img src="images/partner-collegetours.png" alt="partner college tours"></li>
+                <li class="partner"><img src="images/partner-rentalbike.png" alt="partner bike rentals"></li>
+                <li class="partner"><img src="images/partner-tourgroup.png" alt="partner tour group"></li>
+            </ul>
+        </section>
     </main>
     <footer>
         <div id="nondisclaimer">
-            <div class="copy">
-            <p> &copy Copyright 2020 - GreatCliffs.com</p>
-            </div>
             <div class="social">
-                <h3>Facebook Image</h3>
-                <h3>Instagram Image</h3>
-                <h3>Twitter Image</h3>
-            <div>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+            <div class="copy">
+                <p> &copy Copyright 2020 - GreatCliffs.com</p>
+            </div>
         </div>
         <div class="disclaimer">
             <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
