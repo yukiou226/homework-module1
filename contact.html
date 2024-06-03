@@ -66,10 +66,17 @@
         
                     <div class="chanel">
                      <label for="hearAbout">How did you hear about us:</label> 
-                    <input type="text" id="hearAbout" name="hearAbout"> 
+                    <textarea type="text" id="hearAbout" name="hearAbout"> </textarea>
                     </div>
 
-                     <button type="submit">Inquire</button>
+                    <!--Random Codes-->
+                    <div class="randomcode">
+                        <input type="text" name="randomcode" placeholder="Enter characters">
+                        <p id="codes"></p>
+                    </div>
+
+                     <button type="submit" id="submit">Inquire</button>
+
                 </fieldset>
         </form>
         <section>
@@ -99,23 +106,11 @@
             <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
         </div>
     </footer>
-    <script>
-        var photos =[]; //declare an empty array to store iamge 
-    var fileNames=[];//declare an empty element to store image file names
-    var imageList =[];//declare an empty array to store html list that contain an image
-   var image;//declare an empty variable to store the assembled image list codes
-   var openList="<li class='partner'>";//declare a var to contain open list tag
-   var closeList="</li>"//declare a var to contain close list tag
+    <script src="js/site_scripts.js">   
+    
+    </script>
+    <script src="js/randomcodes.js">
 
-    //create a loop to create 6 images strating with index of 0
-   for (var i=0;i<6;i++){
-   fileNames.push("partner"+(i+1));
-   photos.push('<img src="images/'+fileNames[i]+'.png">'); //assemble file name into image element and store in an array
-   image = openList+photos[i]+closeList;
-   imageList.push(image);
-    }
-    //display all six image codes stored in the array
-    document.getElementById("partners").innerHTML=imageList.join(" ");
     </script>
 </body>
 </container>
