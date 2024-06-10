@@ -27,12 +27,20 @@ function disableButton(btnvalue){
     }
 }
 //listen to user input code
-var codebox = document.getElementById("codes"); //get textbox
+var codebox = document.getElementById("codeentered"); //get textbox
 codebox.addEventListener("input",evaluateCode);//listed to code entered in the box
 
 //run function when detected user had entered a character in textbox
 function evaluateCode(){
-    getCode=document.getElementById("codes").value
+    getCode=document.getElementById("codeentered").value
+    var charset1=getCode.trim();
+    var charset2=code.trim();
+
+    if(charset1.length===charset2.length && charset1 === charset2){
+        disableButton(false);
+    } else {
+        disableButton(true);
+    }
 }
 //activate function
 disableButton();
