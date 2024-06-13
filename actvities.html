@@ -6,7 +6,9 @@
     <title>Great Cliffs of California</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body id="activities">
     <header>
         <div class="mainheader">
@@ -77,17 +79,17 @@
                 </tr>
             </tbody>
         </table>
-        <section>
-            
-            <ul id="partners">
-                <!--<li class="partner"><img src="images/partner-bustour.png" alt="partner bus tours"></li>
-                <li class="partner"><img src="images/partner-cabinrental.png" alt="partner cabin rental"></li>
-                <li class="partner"><img src="images/partner-campingadv.png" alt="partner vamping adventure"></li>
-                <li class="partner"><img src="images/partner-collegetours.png" alt="partner college tours"></li>
-                <li class="partner"><img src="images/partner-rentalbike.png" alt="partner bike rentals"></li>
-                <li class="partner"><img src="images/partner-tourgroup.png" alt="partner tour group"></li>-->
-            </ul>
-        </section>                   
+
+        <div id="displaySelected">
+            <div id="result">
+                <h4>My selected activities to enquire:</h4>
+            </div>
+            <div id="sendinfo">
+                <input type="email" placeholder="johndoe@gmail.com">
+                <button>Get info</button>
+            </div>
+        </div>
+                        
     </main>
     <footer>
         <div id="nondisclaimer">
@@ -105,8 +107,8 @@
         </div>
     </footer>
     <script src="js/site_scripts.js">
-   
     </script>
+    <script src="js/activity.js"></script>
 </body>
 </container>
 </html>
