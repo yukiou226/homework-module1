@@ -239,6 +239,7 @@ button:hover {
     box-sizing: border-box;
 }
 
+
 /*Timeclock*/
 #timeofday{
     height: 60px;
@@ -254,8 +255,4 @@ button:hover {
 }
 #clock{
     margin-left:10px;
-}
-/*Wk6-day1*/
-.selected {
-    background-color: rgb(0, 255, 4);
 }
