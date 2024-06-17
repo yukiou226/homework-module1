@@ -19,9 +19,9 @@ $(document).ready(function() {
             if($(this).hasClass("selected")) {
                 $('#displaySelected').css("visibility","visible"); // make display box visible
                 $('#displaySelected').css("margin-top","2em"); // add spaces above box
-                $('#result').append("<p>" +content + "at " + cliffSiteName + "</p>"); // add child element with cliff site and activity
+                $('#result').append("<p>" +content + " at " + cliffSiteName + "</p>"); // add child element with cliff site and activity
             } else { // if selected cell doesn't have class
-                $('#result p:contains('+cliffSiteName+'"at " '+content+')').remove(); // remove child element
+                $('#result p:contains('+cliffSiteName+'" at " '+content+')').remove(); // remove child element
 
                 if($('#result').has('p').length == false) {
                     $('#displaySelected').css("visibility","hidden");
