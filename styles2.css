@@ -113,7 +113,7 @@ footer #nondisclaimer .social .fa {
     width: 15px;
     text-align: center;
     text-decoration: none;
-    margin: 0 4px;
+    margin: 4px 4px;
     border-radius: 50%;
 }
 footer #nondisclaimer .social .fa:hover {
