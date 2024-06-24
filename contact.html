@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<container>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Great Cliffs of California</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylecontact.css">
 </head>
-<body id="contact" onLoad="disableButton(true)">
-    <header>
-        <div class="mainheader">
-            <div class="logo">
-                <image src="images/logo.png" alt="Great Cliffs Logo" width="125"></image>
+<body id="contact" onload="disableButton(true)">
+    <div class="main-header container sticky-top">
+        <div class="row align-items-center">
+            <div class="col-8 col-md-3 logo">
+                <img src="images/logo.png" alt="Great Cliffs Logo" class="img-fluid">
             </div>
-        <nav class="main-menu">
-            <ul>
-                <li><a href=index.html>Home</a></li>
-                <li><a href=cliffs.html>Cliffs</a></li>
-                <li><a href=actvities.html>Activities</a></li>
-                <li class="active"><a href=contact.html>Contact</a></li>
-            </ul>
-        </nav>
+            <nav class="navbar navbar-expand-lg col-md-9">
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="index2.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cliffs.html">Cliffs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
+    </div>
+    <header>
     </header>
-    <main>
-        
+    <main class="container">
         <h1>Contact Us</h1>
-        <p class="contenttext">If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us bu using one of the following:</p>
+        <p class="contenttext">If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us using one of the following:</p>
         <p class="contacttext1"><span class="bold">Phone:</span>(800)CGCLIFFS</p>
-        <p class="contacttext2"><span class="bold">Email:</span>info@geatcliffs.com</p> 
-        <!--Form filling-->    
-        <form action="/contact" method="post">   
-                <fieldset>
-                    <legend>Contact Form</legend>
-                    <div class="personalinfo">
+        <p class="contacttext2"><span class="bold">Email:</span>info@geatcliffs.com</p>
+        <!--Form filling-->
+        <form action="/contact" method="post">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <div class="personalinfo">
                     <label>Enter your full name</label>
-                    <input type="text" id="fullName" name="fullName" required> 
-        
-                    <label>Enter your email</label> 
-                    <input type="email" id="email" name="email" required> 
-        
-                    <label>Enter your phone</label> 
-                    <input type="tel" id="phone" name="phone"> 
+                    <input type="text" id="fullName" name="fullName" class="form-control" required>
+                    <label>Enter your email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <label>Enter your phone</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="contactmethod">
+                    <label>How should we contact you?</label>
+                    <div class="radiogroup">
+                        <input type="radio" id="emailContact" name="contactMethod" value="Email">
+                        <label for="emailContact">Email</label>
+                        <input type="radio" id="phoneContact" name="contactMethod" value="Phone">
+                        <label for="phoneContact">Phone</label>
                     </div>
-                    
-                    <div class="contactmethod">
-                     <label>How should we contact you?</label> 
-                     <div class="radiogroup">
-                    <input type="radio" id="emailContact" name="contactMethod" value="Email">
-                    <label for="emailContact">Email</label> 
-                    <input type="radio" id="phoneContact" name="contactMethod" value="Phone">
-                    <label for="phoneContact">Phone</label> 
-                    </div>
-                    </div>
-        
-                    <div class="cliffoption">
-                     <label>Which Cliff are you inquiring?</label> 
-                    <select id="cliffInquiry" name="cliffInquiry">
+                </div>
+                <div class="cliffoption">
+                    <label>Which Cliff are you inquiring?</label>
+                    <select id="cliffInquiry" name="cliffInquiry" class="form-control">
                         <option value="West Cliff">West Cliff</option>
                         <option value="North Cliff">North Cliff</option>
                         <option value="East Cliff">East Cliff</option>
                         <option value="South Cliff">South Cliff</option>
-                    </select> 
-                    </div>
-        
-                    <div class="chanel">
-                     <label for="hearAbout">How did you hear about us:</label> 
-                    <textarea type="text" id="hearAbout" name="hearAbout"> </textarea>
-                    </div>
-
-                    <!--Random Codes-->
-                    <div class="randomcode">
-                        <input type="text" name="randomcode" placeholder="Enter characters">
-                        <p id="codes"></p>
-                    </div>
-
-                     <button type="submit" id="submit">Inquire</button>
-
-                </fieldset>
+                    </select>
+                </div>
+                <div class="chanel">
+                    <label for="hearAbout">How did you hear about us:</label>
+                    <textarea id="hearAbout" name="hearAbout" class="form-control"></textarea>
+                </div>
+                <div class="randomcode">
+                    <input type="text" name="randomcode" class="form-control" placeholder="Enter characters">
+                    <p id="codes"></p>
+                </div>
+                <button type="submit" id="submit" class="btn btn-primary"><i class="fa font-awesome"></i> Inquire</button>
+            </fieldset>
         </form>
-        <section>
-            
-            <ul id="partners">
-                <!--<li class="partner"><img src="images/partner-bustour.png" alt="partner bus tours"></li>
-                <li class="partner"><img src="images/partner-cabinrental.png" alt="partner cabin rental"></li>
-                <li class="partner"><img src="images/partner-campingadv.png" alt="partner vamping adventure"></li>
-                <li class="partner"><img src="images/partner-collegetours.png" alt="partner college tours"></li>
-                <li class="partner"><img src="images/partner-rentalbike.png" alt="partner bike rentals"></li>
-                <li class="partner"><img src="images/partner-tourgroup.png" alt="partner tour group"></li>-->
+
+        <section class="container-fluid">
+            <ul id="partners" class="row">
+                <li class="col-6 col-md-4 col-lg-2 partner">
+                    <div class="partner-img-wrapper">
+                        <img src="images2/partners/partner-bustour.png" alt="Partner Bus Tours" class="img-fluid">
+                    </div>
+                </li>
+                <li class="col-6 col-md-4 col-lg-2 partner">
+                    <div class="partner-img-wrapper">
+                        <img src="images2/partners/partner-cabinrental.png" alt="Partner Cabin Rental" class="img-fluid">
+                    </div>
+                </li>
+                <li class="col-6 col-md-4 col-lg-2 partner">
+                    <div class="partner-img-wrapper">
+                        <img src="images2/partners/partner-campingadv.png" alt="Partner Camping Adventure" class="img-fluid">
+                    </div>
+                </li>
+                <li class="col-6 col-md-4 col-lg-2 partner">
+                    <div class="partner-img-wrapper">
+                        <img src="images2/partners/partner-collegetours.png" alt="Partner College Tours" class="img-fluid">
+                    </div>
+                </li>
+                <li class="col-6 col-md-4 col-lg-2 partner">
+                    <div class="partner-img-wrapper">
+                        <img src="images2/partners/partner-rentalbike.png" alt="Partner Bike Rentals" class="img-fluid">
+                    </div>
+                </li>
+                <li class="col-6 col-md-4 col-lg-2 partner">
+                    <div class="partner-img-wrapper">
+                        <img src="images2/partners/partner-tourgroup.png" alt="Partner Tour Group" class="img-fluid">
+                    </div>
+                </li>
             </ul>
         </section>
     </main>
-    <footer>
+    <footer class="container-fluid">
         <div id="nondisclaimer">
             <div class="social">
                 <a href="#" class="fa fa-facebook"></a>
@@ -106,12 +128,10 @@
             <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
         </div>
     </footer>
-    <script src="js/site_scripts.js">   
-
-    </script>
-    <script src="js/randomcodes.js">
-
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/site_scripts.js"></script>
+    <script src="js/randomcodes.js"></script>
 </body>
-</container>
 </html>

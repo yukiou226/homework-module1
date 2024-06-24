@@ -1,12 +1,12 @@
 /* Header */
 header {
     width: 100%;
-    min-height: 400px;
+    min-height: 275px;
     padding-top: 3em;
 }
-#home header {
-    background: no-repeat lightgrey url(images/cliff_ocean.jpg);
-    background-size: cover;
+#home {
+    background: no-repeat white url(images/cliff_ocean.jpg);
+    background-size: 100% 400px;
 }
 .main-header {
     background-color: rgba(255, 255, 255, 0.8);
@@ -22,11 +22,14 @@ header {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
+.sticky-top{
+    background-color: rgba(38, 41, 61, 0.7);
+}
 
-.main-menu ul {
+.main-header ul {
     padding-left: 0;
 }
-.main-menu ul li {
+.main-header ul li {
     list-style-type: none;
     display: inline-block;
     padding-left: 25px;
@@ -34,22 +37,23 @@ header {
     border-left: 1px solid rgba(202, 204, 202, 0.6);
     text-transform: uppercase;
     font-size: 14px;
+    color: rgb(255, 255, 255);
 }
-.main-menu ul li:first-child {
+.main-header ul li:first-child {
     border-left: none;
 }
-.main-menu ul li a {
+.main-header ul li a {
     text-decoration: none;
     color: #888;
 }
-.main-menu ul li a:hover {
+.main-header ul li a:hover {
     color: #9ed034;
 }
-.main-menu ul li.active {
+.main-header ul li.active {
     background: #9ed034;
     border: none;
 }
-.main-menu ul li.active a {
+.main-header ul li.active a {
     color: #fff;
 }
 
@@ -79,19 +83,30 @@ section {
     background-color: #4288C3;
     padding: 2em 0;
 }
-#partners .partner {
-    margin-bottom: 1em;
-    text-align: center;
+section #partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em; /* Adjust spacing between images */
+    padding: 2em 0;
+    list-style: none;
 }
-.partner-img-wrapper {
+section #partners .partner {
     background-color: #fff;
     border-radius: 50%;
-    padding: 1.3em;
-    display: inline-block;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
 }
-.partner-img-wrapper img {
-    width: 90px;
-    height: 90px;
+section #partners .partner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* Footer */
@@ -148,16 +163,16 @@ footer #disclaimer p {
     }
 }
 @media (max-width: 992px) {
-    .main-menu {
+    .main-header {
         width: 100%;
         text-align: center;
     }
-    .main-menu ul li {
+    .main-header ul li {
         display: block;
         border-bottom: 1px solid rgba(202, 204, 202, 0.6);
         padding: 10px 0;
     }
-    .main-menu ul li a {
+    .main-header ul li a {
         padding: 10px 0;
         display: block;
     }
@@ -176,3 +191,209 @@ footer #disclaimer p {
         display: flex !important;
     }
 }
+
+/* Activities Page */
+table {
+    width: 100%;
+    margin: 4em auto;
+}
+caption {
+    background: #852b1b;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+thead {
+    background: #bde1ff;
+}
+tbody {
+    background: #eeffe6;
+    text-align: center;
+}
+th, td {
+    vertical-align: middle;
+    border: solid 1px #852b1b;
+}
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #4977d1;
+    color: #fff;
+}
+td:first-child {
+    font-weight: bold;
+    background: #bde1ff;
+}
+#activities main #displaySelected {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid yellowgreen;
+    padding: 0.75em;
+}
+#activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+#activities main #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+#activities main #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+#activities main #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
+/* Highlight selected cells */
+.selected {
+    background-color: greenyellow;
+}
+
+/* Contact Page */
+.contacttext1 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 80px;
+}
+.contacttext2 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 80px;
+}
+.bold {
+    font-weight: bold;
+}
+form {
+    width: auto;
+    margin: 16px 80px 80px auto;
+    padding-left: 80px;
+}
+fieldset {
+    border: 1px solid #9ed034;
+    padding: 20px;
+}
+legend {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4977D1;
+}
+.personalinfo label {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-bottom: 8px;
+}
+.chanel, .contactmethod, .cliffoption {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 8px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+select {
+    width: 160px;
+}
+textarea {
+    display: block;
+    height: 80px;
+    width: 60%;
+}
+input[type="radio"] {
+    margin-right: 6px;
+}
+.radiogroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.randomcode {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.randomcode input[type="text"] {
+    width: 12%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#codes {
+    background-color: #e0e0e0;
+    padding: 10px 10px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+button:hover {
+    background-color: #2b5a8a;
+}
+
+/* Cliffs Page */
+#cliffphotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.cliffphoto {
+    width: 40%;
+    list-style: none;
+    margin: 1%;
+    box-sizing: border-box;
+    position: relative;
+}
+.cliffphoto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.cliffphoto-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(149, 0, 0, 0.8);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Timeclock
+#timeofday {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(0deg, rgba(251, 215, 139, 1) 0%, rgba(118, 213, 245, 1) 100%);
+    color: #125688;
+}
+#timeofday span:first-child {
+    color: #3a3a3a;
+}
+#clock {
+    margin-left: 10px;
+}*/
